@@ -4,8 +4,9 @@
 			marca.textContent = "Julia Nutrition";
 
             //acessar a tag TR -> paciente Paulo
-            var paciente = document.querySelectorAll('.paciente');
-            for(var i = 0; i < paciente.length; i++){
+            var pacientes = document.querySelectorAll('.paciente');
+            for(var i = 0; i < pacientes.length; i++){
+                var paciente = pacientes[i];
             //selecionou o conteudo da tag
             var tdPeso = paciente.querySelector(".info-peso");
             var peso = tdPeso.textContent;
