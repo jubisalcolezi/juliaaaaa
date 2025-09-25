@@ -27,7 +27,7 @@
             //Definindo quando imc será calculado
             if (pesoValido && alturaValida){
                 var tdImc = paciente.querySelector(".info-imc");
-                tdImc.textContent = imc;
+                tdImc.textContent = imc.toFixed(1);
             }
 
             //definindo limite peso e altura, assim sendo FALSO
@@ -35,6 +35,7 @@
                 console.log("peso invalido");
                var pesoValido = false;
                tdImc.textContent = "Peso Invalido"
+               paciente.style.backgroundColor = "purple";
             }
             if(altura <= 0 || altura > 3.00){
                 console.log("altura invalida");
