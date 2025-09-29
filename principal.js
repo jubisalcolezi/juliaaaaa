@@ -3,6 +3,8 @@
 			var marca = document.querySelector(".titulo");
 			marca.textContent = "Julia Nutrition";
 
+            
+
             //acessar a tag TR -> paciente Paulo
             var pacientes = document.querySelectorAll('.paciente');
             for(var i = 0; i < pacientes.length; i++){
@@ -35,17 +37,25 @@
                 console.log("peso invalido");
                var pesoValido = false;
                tdImc.textContent = "Peso Invalido"
+               paciente.classList.add("campo-invalido");
                paciente.style.backgroundColor = "purple";
             }
             if(altura <= 0 || altura > 3.00){
                 console.log("altura invalida");
                var alturaValida = false;
                tdImc.textContent = "Altura Invalida"
-            }
-
-            }
-
+               paciente.classList.add("campo-invalido");
             
+
+            }
+            //quando clicar no titulo, apareça uma mensagem
+            subtitulo.addEventListener('click', MostraMensagem);
+
+            function MostraMensagem(){
+                alert("Este elemento foi clicado");
+            }
+        
+            }
             
             
             
